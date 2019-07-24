@@ -15,7 +15,7 @@ public class Employee {
     private Long id;
     private String name;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate birthDate;
+    private Date birthDate;
     private String address;
     private String image;
     private float salary;
@@ -23,7 +23,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Long id,String name, LocalDate birthDate, String address,  float salary, String image, Department department) {
+    public Employee(Long id,String name, Date birthDate, String address,  float salary, String image, Department department) {
         this.id=id;
         this.name = name;
         this.birthDate = birthDate;
@@ -53,11 +53,11 @@ public class Employee {
         this.name = name;
     }
 
-    public LocalDate getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 

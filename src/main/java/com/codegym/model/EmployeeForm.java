@@ -12,7 +12,7 @@ public class EmployeeForm {
     private Long id;
     private String name;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate birthDate;
+    private Date birthDate;
     private String address;
     private MultipartFile avatar;
     private float salary;
@@ -20,7 +20,7 @@ public class EmployeeForm {
     public EmployeeForm() {
     }
 
-    public EmployeeForm(Long id, String name, LocalDate birthDate, String address, MultipartFile avatar, float salary, Department department) {
+    public EmployeeForm(Long id, String name, Date birthDate, String address, MultipartFile avatar, float salary, Department department) {
         this.department = department;
         this.id = id;
         this.name = name;
@@ -40,11 +40,11 @@ public class EmployeeForm {
         this.name = name;
     }
 
-    public LocalDate getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 

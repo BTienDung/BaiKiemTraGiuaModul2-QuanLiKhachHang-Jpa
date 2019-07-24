@@ -100,6 +100,7 @@ public class EmployeeController {
         if (fileName== ""){
             fileName = employeeOld.getImage();
         }
+
         Employee employee = new Employee(employeeForm.getId(),employeeForm.getName(),employeeForm.getBirthDate() ,employeeForm.getAddress(),employeeForm.getSalary(), fileName, employeeForm.getDepartment());
         employeeService.save(employee);
         Page<Employee> employees = employeeService.findAll(pageable);
